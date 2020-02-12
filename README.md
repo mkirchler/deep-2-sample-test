@@ -15,7 +15,7 @@ pip install .
 ## Usage
 
 Our proposed Tests are implemented in `embeddingtests.py` as `DFDATest` and `DMMDTest`.
-For kernel-based tests we use wrappers around the implementation of fottest, found in `kerneltests.py`.
+For kernel-based tests we use wrappers around the implementation of [freqopttest](https://github.com/wittawatj/interpretable-test), found in `kerneltests.py`.
 Transfer-C2STs are implemented in `c2st.py`.
 Other modules (`base.py`, `data.py`, `load_tests.py` and `utils.py`) are utility functionalities.
 
