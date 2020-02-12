@@ -12,14 +12,14 @@ Install `deeptest` module via
 pip install .
 ```
 
-The module can then be used e.g. via
+## Usage
 
-```python
-from deeptest import DFDATest
-```
-Experiments can be found in `experiments.py`.
+Our proposed Tests are implemented in `embeddingtests.py` as `DFDATest` and `DMMDTest`.
+For kernel-based tests we use wrappers around the implementation of fottest, found in `kerneltests.py`.
+Transfer-C2STs are implemented in `c2st.py`.
+Other modules (`base.py`, `data.py`, `load_tests.py` and `utils.py`) are utility functionalities.
 
-A cleaned-up version of this code will be made available upon publication.
+Example usage and all experiments from the paper can be found under `experiments/experiments.py`.
 
 
 ## Data
@@ -58,13 +58,5 @@ We use the pretrained resnet-152 provided in pytorch.
 ### Your own data
 
 To use the test on your own data, inherit from `TestData` (in `data.py`) and implement the methods `test_h0()` (returning true, if samples from H0 can be drawn) and `get_data(H0=True)` which returns two numpy-arrays X, Y drawn according to H0 or H1. Tests & data can then be used together via TestPipe(...).evalutate_test() (which returns t1er, t2er, and p-values).
-
-## Explanations
-
-Our proposed Tests are implemented in `embeddingtests.py` as `DFDATest` and `DMMDTest`.
-For kernel-based tests we use wrappers around the implementation of fottest, found in `kerneltests.py`.
-Transfer-C2STs are implemented in `c2st.py`.
-Other modules (`base.py`, `data.py`, `load_tests.py` and `utils.py`) are utility functionalities.
-
 
 
