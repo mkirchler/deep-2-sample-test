@@ -31,18 +31,18 @@ The data can be downloaded from `http://dl.lowtempmusic.com/Gramatik-TAOR.zip`. 
 ```
 ffmpeg -i INFILE.mp3 -ar 8000 OUTFILE.wav
 ```
-Pretrained weights are under `models/M5weights.pt`; a script for training can be found in `audio.py`.
+Pretrained weights are under `models/M5weights.pt`; a script for training can be found in `experiments/audio.py`.
 
 ### Aircraft Data
 
 Data can be downloaded from `http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/archives/fgvc-aircraft-2013b.tar.gz` and needs to be extracted into separate directories according to classes.
-You can use the script `aircraft.py` but might need to adapt to your system.
+You can use the script `experiments/aircraft.py` but might need to adapt to your system.
 We use the pretrained resnet-152 provided in pytorch.
 
 ### Stanford Dogs Data
 
 Data can be downloaded from `http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar`.
-Pretrained weights are under `models/Supervised_dogs_weights.pt` and `models/CAEweights.pt`; a script for training can be found in `dogs.py`.
+Pretrained weights are under `models/Supervised_dogs_weights.pt` and `models/CAEweights.pt`; a script for training can be found in `experiments/dogs.py`.
 
 ### Facial Expressions
 
